@@ -47,7 +47,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 }
 
 /* Maps Page */
-.swishCard a .item h2, .swishCard a .item p{
+.swishCard a{
 	text-decoration:none;
 }
 
