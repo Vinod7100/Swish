@@ -52,7 +52,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 }
 
 /* Chat Page */
-$stable:                          #f8f8f8 !default;
+$stable:  #f8f8f8 !default;
 
 .scroll {
   padding: 10px 0 50px !important;
@@ -142,12 +142,12 @@ $stable:                          #f8f8f8 !default;
 
 /*** google maps ***/
 .mapCanvas{
-	height:250px;
-	position: relative;
+	height:100%;
+	/*position: relative;*/
 }
 #map_canvas {
     width: 100%;
-    height: 250px;
+    height: 100%;
     margin: 0;
     position: relative;
 }
@@ -158,8 +158,8 @@ $stable:                          #f8f8f8 !default;
 
 .angular-google-map-container {
     position: absolute;
-	height:100%;
-	width:100%;
+	/*height:100%;
+	width:100%;*/
     top: 0;
     bottom: 0;
     right: 0;
