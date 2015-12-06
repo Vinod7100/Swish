@@ -1,0 +1,17 @@
+<ion-view view-title="Comments">
+<ion-nav-buttons side="right">
+    <button class="button button-icon" ng-click="showMenu($event)">
+      <i class="icon ion-android-more-vertical"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+	
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="comment in comments" type="item-text-wrap">
+        <img ng-src="{{comment.face}}">
+        <h2>{{comment.name}}</h2>
+        <p>{{comment.text}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

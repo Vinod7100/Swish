@@ -1,0 +1,46 @@
+<ion-view view-title="Join Us">
+  <ion-content>
+    <form ng-submit="doRegistration()">
+		<div class="list list-inset">
+			<label class="item item-input">
+			
+				<input type="text" ng-model="loginData.username" placeholder="Name">
+			</label>
+			<label class="item item-input">
+				
+				<input type="email" ng-model="loginData.username" placeholder="Email">
+			</label>
+			<label class="item item-input">
+				<i class="placeholder-icon">DOB</i>
+				<input type="date" ng-model="loginData.username" placeholder="DOB">
+			</label>
+			<label class="item item-input">
+				
+				<input type="text" ng-model="loginData.username" placeholder="Country">
+			</label>
+			<label class="item item-input">
+				
+				<input type="text" ng-model="loginData.username" placeholder="State">
+			</label>
+			<label class="item item-input">
+				
+				<input type="text" ng-model="loginData.username" placeholder="City">
+			</label>
+			<label class="item item-input">
+				
+				<input type="password" ng-model="loginData.password" placeholder="Password">
+			</label>
+			<label class="item item-input">
+				
+				<input type="password" ng-model="loginData.password" placeholder="Re-Password">
+			</label>
+			<label class="item">
+				<button class="button button-block button-positive" type="submit">Submit</button>
+			</label>
+		</div>
+		<div class="list list-inset">
+			<a href="#/login">Already have an Account?</a>
+		</div>
+    </form>
+  </ion-content>
+</ion-view>

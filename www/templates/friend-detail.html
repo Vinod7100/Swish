@@ -1,0 +1,42 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{friend.name}}">
+  <ion-content>
+	<div class="list profile">
+			<div class="item item-thumbnail-left" href="#">
+				<img ng-src="{{friend.face}}">
+				<h2>{{friend.name}}</h2>
+				<p>{{friend.lastText}}</p>
+			</div>
+		
+			<div class="item tabs tabs-secondary tabs-icon-left">
+				<a class="tab-item" href="#">
+					<i class="icon ion-person-stalker"></i>
+					Mutual Friends<p>180</p>
+				</a>
+				<a class="tab-item" href="#">
+					<i class="icon ion-ios-location"></i>
+					Nearby court<p>YMC New York</p>
+				</a>
+				<a class="tab-item" href="#">
+					<i class="icon ion-star"></i>
+					Swish Rating<p>{{rate}}/{{max}}</p>
+				</a>
+			</div>
+			
+			<div class="item heightAuto">
+				<h3>Rate your friend:</h3>
+				<rating ng-model="rate" max="max"></rating>
+				<div class="list list-inset">
+					<label class="item item-input">
+						<textarea name="" placeholder="Enter Comments Here..."></textarea>
+					</label>
+				</div>
+			</div>
+		</div>
+  </ion-content>
+</ion-view>

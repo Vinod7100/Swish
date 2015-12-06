@@ -1,0 +1,14 @@
+<ion-view view-title="Account">
+<ion-nav-buttons side="right">
+    <button class="button button-icon" ng-click="showMenu($event)">
+      <i class="icon ion-android-more-vertical"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+    <ion-toggle  ng-model="settings.enableFriends">
+        Enable Friends
+    </ion-toggle>
+    </ion-list>
+  </ion-content>
+</ion-view>
