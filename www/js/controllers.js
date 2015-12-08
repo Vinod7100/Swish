@@ -161,8 +161,15 @@ angular.module('starter.controllers', [])
   
 })
 
-.controller('MapsCtrl', function($scope, Posts) {
-	//map variable containing the map details, will be referenced from the html
+.controller('MapsCtrl', function($scope, Posts, $ionicLoading) {
+	
+	ionic.Platform.ready(function(){
+        $ionicLoading.show({
+            template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Acquiring location!'
+        });
+		
+		
+		//map variable containing the map details, will be referenced from the html
     $scope.map = {
       center: {
         latitude: 40.1451,
@@ -208,6 +215,12 @@ angular.module('starter.controllers', [])
         $scope.randomMarkers = markers;
       }
     }, true);
+	
+	//$ionicLoading.hide();
+		
+    });
+	
+	
 })
 
 .controller('SearchCtrl', function($scope) {
