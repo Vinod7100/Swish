@@ -8,7 +8,7 @@
 		Vinod Kumar
     </author>
     <content src="index.html" />
-    <access origin="http://parssv.com/*"/>
+    <access origin="*"/>
     <allow-navigation href="*" />
     <allow-intent href="*" />
     <preference name="webviewbounce" value="true" />

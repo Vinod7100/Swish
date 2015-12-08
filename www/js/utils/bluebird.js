@@ -5274,8 +5274,9 @@ function toFastProperties(obj) {
     /*jshint -W027*/
     function f() {}
     f.prototype = obj;
-    return f;
+    
     eval(obj);
+	return f;
 }
 
 var rident = /^[a-z$_][a-z$_0-9]*$/i;

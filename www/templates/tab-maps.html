@@ -4,8 +4,8 @@
 			<i class="icon ion-android-more-vertical"></i>
 		</button>
 	</ion-nav-buttons>
-	<ion-content>
-		<div class="mapCanvas">
+	<ion-content has-bouncing="true">
+		<div id="map_canvas">
 			<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
 				<ui-gmap-markers models="randomMarkers" coords="'self'" icon="'icon'">
 				</ui-gmap-markers>
