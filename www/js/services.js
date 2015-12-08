@@ -9,31 +9,31 @@ angular.module('starter.services', [])
     name: 'Vinod Kumar',
     posted_on: 'November 05, 1955',
 	description: 'A facebook friend just joined Swish',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }, {
     id: 1,
     name: 'Soru Khurana',
     posted_on: 'November 05, 1955',
 	description: 'Accepted your friend request',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }, {
     id: 2,
     name: 'Sonam',
     posted_on: 'November 05, 1955',
 	description: 'Has checked in YMCA',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }, {
     id: 3,
     name: 'Sajan',
     posted_on: 'November 05, 1955',
 	description: 'Has checked in New York sport club',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }, {
     id: 4,
     name: 'Ben Sparrow',
     posted_on: 'November 05, 1955',
 	description: 'Has checked in New York sport club',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }];
 
   return {
@@ -64,27 +64,27 @@ angular.module('starter.services', [])
     id: 0,
     name: 'Ben Sparrow',
     lastText: 'You on your way?',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }, {
     id: 1,
     name: 'Max Lynx',
     lastText: 'Hey, it\'s me',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }, {
     id: 2,
     name: 'Adam Bradleyson',
     lastText: 'I should buy a boat',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }, {
     id: 3,
     name: 'Perry Governor',
     lastText: 'Look at my mukluks!',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }, {
     id: 4,
     name: 'Mike Harrington',
     lastText: 'This is wicked good ice cream.',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }];
 
   return {
@@ -113,27 +113,27 @@ angular.module('starter.services', [])
     id: 0,
     name: 'Ben Sparrow',
     lastText: 'You on your way?',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }, {
     id: 1,
     name: 'Max Lynx',
     lastText: 'Hey, it\'s me',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }, {
     id: 2,
     name: 'Adam Bradleyson',
     lastText: 'I should buy a boat',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }, {
     id: 3,
     name: 'Perry Governor',
     lastText: 'Look at my mukluks!',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }, {
     id: 4,
     name: 'Mike Harrington',
     lastText: 'This is wicked good ice cream.',
-    face: '/img/ionic.png'
+    face: 'img/ionic.png'
   }];
 
   return {
