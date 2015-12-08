@@ -20,6 +20,8 @@ angular.module('starter.controllers', [])
 	
 	$scope.posts = Posts.all();
 	
+	$scope.image = $scope.posts[0].face;
+	
 	$scope.doRefresh = function(){
 		$scope.posts = Posts.all();
 	}
