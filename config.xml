@@ -11,6 +11,8 @@
     <access origin="*"/>
     <allow-navigation href="*" />
     <allow-intent href="*" />
+	<allow-intent href="http://*/*">
+	<allow-intent href="https://*/*">
     <preference name="webviewbounce" value="true" />
     <preference name="UIWebViewBounce" value="true" />
     <preference name="DisallowOverscroll" value="true" />
