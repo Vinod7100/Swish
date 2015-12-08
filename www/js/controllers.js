@@ -19,6 +19,10 @@ angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope, Posts, $ionicPopover) {
 	
 	$scope.posts = Posts.all();
+	
+	$scope.doRefresh = function(){
+		$scope.posts = Posts.all();
+	}
   
 })
 
