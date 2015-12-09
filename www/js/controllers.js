@@ -216,7 +216,7 @@ angular.module('starter.controllers', [])
       }
     }, true);
 	
-	//$ionicLoading.hide();
+	$ionicLoading.hide();
 		
     });
 	
