@@ -5,8 +5,24 @@
 		</button>
 	</ion-nav-buttons>
 	<ion-content has-bouncing="true">
-		<ion-list>
-		
-		</ion-list>
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="Search" ng-model="searchText">
+		</label>
+		<div id="map_canvas" class="searchPage">
+			<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
+				<ui-gmap-markers models="randomMarkers" coords="'self'" icon="'icon'">
+				</ui-gmap-markers>
+			</ui-gmap-google-map>
+		</div>
+		<div class="list card swishCard" ng-repeat="post in posts | filter:searchText">
+			<a href="#">
+				<div class="item">
+					<h2>{{post.name}}</h2>
+					<p>{{post.description}}</p>
+					<p>({{post.posted_on}})</p>
+				</div>
+			</a>
+		</div>
 	</ion-content>
 </ion-view>

@@ -67,18 +67,6 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
 		templateUrl: "templates/login.html",
 		controller: 'LoginCtrl'
 	})
-	
-	.state('registration', {
-		url: "/registration",
-		templateUrl: "templates/registration.html",
-		controller: 'RegistrationCtrl'
-	})
-	
-	.state('recover', {
-		url: "/recover",
-		templateUrl: "templates/recover-password.html",
-		controller: 'RecoverCtrl'
-	})
 
 	.state('tab.chats', {
       url: '/chats',

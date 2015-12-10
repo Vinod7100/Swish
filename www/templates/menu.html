@@ -1,6 +1,6 @@
 <ion-popover-view>
   <ion-content has-bouncing="true">
-    <div class="list">
+    <div class="list menu">
       <div class="item item-icon-left">
         <i class="icon ion-speakerphone"></i>
         Announcement
@@ -16,6 +16,12 @@
       <div class="item item-icon-left">
         <i class="icon ion-calendar"></i>
         Event
+      </div>
+	  <div class="item item-icon-left">
+		<a href="#" ng-click="doLogout()" style="display:block">
+			<i class="icon ion-log-out"></i>
+			Logout
+		</a>
       </div>
     </div>
   </ion-content>
