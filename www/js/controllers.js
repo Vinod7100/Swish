@@ -291,13 +291,19 @@ angular.module('starter.controllers', [])
   
 })
 
-.controller('LoginCtrl', function($scope, $timeout, $state, $ionicPopup) {
+.controller('LoginCtrl', function($scope, $timeout, $state, $ionicPopup, $http, $ionicLoading) {
 	// Form data for the login modal
 	$scope.loginData = {};
 	$scope.registerData = {};
 	
 	$scope.doRegistration = function(){
+		$ionicLoading.show({
+            template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Please wait!'
+        });
+		
 		$scope.registerData.error = '';
+		$scope.registerData.success = '';
+		
 		console.log('Doing Registration', $scope.registerData);
 		if(!$scope.registerData.name){
 			$scope.registerData.error = "Please provide Name";
@@ -323,19 +329,46 @@ angular.module('starter.controllers', [])
 		else if($scope.registerData.password !== $scope.registerData.rePassword){
 			$scope.registerData.error = "Password do not match";
 		}else{
-			$scope.registerData.success = "Successfully Registered";
+			$http.post(SERVER_URL +'/registration', {data : $scope.registerData}).then(function (res){
+				$scope.response = res.data;
+				//console.log($scope.response);
+				if($scope.response.type == 'error'){
+					$scope.registerData.error = $scope.response.msg;
+					$ionicLoading.hide();
+				}else if($scope.response.type == 'success'){
+					$scope.registerData = {};
+					$scope.registerData.success = $scope.response.msg;
+					$ionicLoading.hide();
+				}
+			});
 		}
 	}
 
 	// Perform the login action when the user submits the login form
 	$scope.doLogin = function() {
+		$scope.loginData.error = '';
+		$scope.loginData.success = '';
+		
+		$ionicLoading.show({
+            template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Please wait!'
+        });
+		
 		console.log('Doing login', $scope.loginData);
-
-		// Simulate a login delay. Remove this and replace with your login
-		// code if using a login system
-		$timeout(function() {
-			$state.go('tab.dash')
-		}, 1000);
+		$http.post(SERVER_URL +'/login', {data : $scope.loginData}).then(function (res){
+			$scope.response = res.data;
+			//console.log($scope.response);
+			if($scope.response.type == 'error'){
+				$scope.loginData.error = $scope.response.msg;
+				$ionicLoading.hide();
+			}else if($scope.response.type == 'success'){
+				$scope.loginData.success = $scope.response.msg;
+				$timeout(function() {
+					$state.go('tab.dash')
+					$ionicLoading.hide();
+					$scope.loginData = {};
+				}, 1000);
+			}
+		});
 	};
 	
 	

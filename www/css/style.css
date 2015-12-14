@@ -41,6 +41,9 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 	margin-top:-10px;
 	margin-bottom:1px;
 }
+.no-margin{
+	margin-top:2px;
+}
 .menu .item a{
 	text-decoration:none;
 	color:#000;

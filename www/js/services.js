@@ -9,7 +9,7 @@ angular.module('starter.services', [])
     name: 'Vinod Kumar',
     posted_on: 'November 05, 1955',
 	description: 'A facebook friend just joined Swish',
-    face: 'http://parssv.com/swish/images/11214.jpg'
+    face: 'http://parssv.com/swish/images/demo.jpg'
   }, {
     id: 1,
     name: 'Soru Khurana',
@@ -21,7 +21,7 @@ angular.module('starter.services', [])
     name: 'Sonam',
     posted_on: 'November 05, 1955',
 	description: 'Has checked in YMCA',
-    face: 'http://parssv.com/swish/images/84TKj_qa.jpeg'
+    face: 'http://parssv.com/swish/images/request-a-demo.png'
   }, {
     id: 3,
     name: 'Sajan',
@@ -69,7 +69,7 @@ angular.module('starter.services', [])
     id: 1,
     name: 'Max Lynx',
     lastText: 'Hey, it\'s me',
-    face: 'http://parssv.com/swish/images/3j5HUXMY.png'
+    face: 'http://parssv.com/swish/images/request-a-demo.png'
   }, {
     id: 2,
     name: 'Adam Bradleyson',
@@ -84,7 +84,7 @@ angular.module('starter.services', [])
     id: 4,
     name: 'Mike Harrington',
     lastText: 'This is wicked good ice cream.',
-    face: 'http://parssv.com/swish/images/11214.jpg'
+    face: 'http://parssv.com/swish/images/demo.jpg'
   }];
 
   return {
@@ -128,7 +128,7 @@ angular.module('starter.services', [])
     id: 3,
     name: 'Perry Governor',
     lastText: 'Look at my mukluks!',
-    face: 'http://parssv.com/swish/images/11214.jpg'
+    face: 'http://parssv.com/swish/images/demo.jpg'
   }, {
     id: 4,
     name: 'Mike Harrington',

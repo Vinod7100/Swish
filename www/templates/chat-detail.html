@@ -5,6 +5,11 @@
   The Friends service returns an array of friend data
 -->
 <ion-view view-title="{{friend.name}}">
+	<ion-nav-buttons side="right">
+		<button class="button button-icon" ng-click="showMenu($event)">
+			<i class="icon ion-android-more-vertical"></i>
+		</button>
+	</ion-nav-buttons>
   <ion-content has-bouncing="true" class="padding">
     <img ng-src="{{friend.face}}" style="width: 64px; height: 64px">
     <div ng-repeat="message in messages" ng-class="{other: message.userId != myId}" class="messages">

@@ -2,6 +2,12 @@
   <ion-content has-bouncing="true">
     <form ng-submit="doLogin()">
 		<div class="list list-inset login">
+			<div class="error no-margin" ng-if="loginData.error">
+				{{loginData.error}}
+			</div>
+			<div class="success no-margin" ng-if="loginData.success">
+				{{loginData.success}}
+			</div>
 			<label class="item item-input">
 				<i class="icon ion-at placeholder-icon"></i>
 				<input type="text" ng-model="loginData.username" placeholder="Email">
