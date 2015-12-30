@@ -105,51 +105,87 @@ angular.module('starter.services', [])
   };
 })
 
-.factory('Friends', function() {
-  // Might use a resource here that returns a JSON array
+.factory('Friends', function($http) {
+	// Might use a resource here that returns a JSON array
+	var users = [];
 
-  // Some fake testing data
-  var friends = [{
-    id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ionic.png'
-  }, {
-    id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/ionic.png'
-  }, {
-    id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/ionic.png'
-  }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'http://parssv.com/swish/images/demo.jpg'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/ionic.png'
-  }];
+	return {
+		getUsers: function(){
+			return $http.get(SERVER_URL +"/users").then(function(response){
+				users = response;
+				return users;
+			});
+		},
+		getUser: function(index){
+			return $http.get(SERVER_URL +"/user/"+ index).then(function(response){
+				user = response;
+				return user;
+			});
+		}
+	};
+})
+
+
+.service('UserService', function() {
+
+//for the purpose of this example I will store user data on ionic local storage but you should save it on a database
+
+	var setUser = function(user_data) {
+		window.localStorage.starter_facebook_user = JSON.stringify(user_data);
+	};
+  
+	var removeItem = function(){
+		window.localStorage.clear();
+	};
+
+	var getUser = function(){
+		return JSON.parse(window.localStorage.starter_facebook_user || '{}');
+	};
+  
+	var setEditUser = function(user_data) {
+		window.localStorage.edit_user = JSON.stringify(user_data);
+	};
+  
+	var getEditUser = function(){
+		return JSON.parse(window.localStorage.edit_user || '{}');
+	};
 
   return {
-    all: function() {
-      return friends;
-    },
-    remove: function(friend) {
-      friends.splice(friends.indexOf(friend), 1);
-    },
-    get: function(friendId) {
-      for (var i = 0; i < friends.length; i++) {
-        if (friends[i].id === parseInt(friendId)) {
-          return friends[i];
-        }
-      }
-      return null;
-    }
+    getUser: getUser,
+    getEditUser: getEditUser,
+    setUser: setUser,
+    removeItem: removeItem,
+    setEditUser: setEditUser
   };
 })
+
+.factory('Message', ['$firebaseArray',
+	function($firebaseArray) {
+		var ref = new Firebase(firebaseUrl);
+		var messages = $firebaseArray(ref.child('messages'));
+ 
+		var Message = {
+			all: messages,
+			create: function (from, to, message) {
+						if (from && to && message) {
+							var chatMessage = {
+								from: from.email,
+								to: to,
+								message: message,
+								createdAt: Firebase.ServerValue.TIMESTAMP
+							};
+							return messages.$add(chatMessage);
+						}
+			},
+			get: function (messageId) {
+				return $firebaseArray(ref.child('messages').child(messageId));
+			},
+			delete: function (message) {
+				return messages.$remove(message);
+			}
+		};
+ 
+		return Message;
+ 
+	}
+]);

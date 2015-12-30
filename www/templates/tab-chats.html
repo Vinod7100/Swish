@@ -12,7 +12,7 @@
 				<input type="text" placeholder="Search" ng-model="searchText">
 			</label>
 		</div>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="friend in friends | filter:searchText" type="item-text-wrap" href="#/tab/chats/{{friend.id}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="friend in friends | filter:searchText | filter:$viewValue" type="item-text-wrap" href="#/tab/chats/{{friend.id}}">
         <img ng-src="{{friend.face}}" src="{{friend.face}}">
         <h2>{{friend.name}}</h2>
         <p>{{friend.lastText}}</p>

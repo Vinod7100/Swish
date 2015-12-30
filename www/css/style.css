@@ -21,6 +21,19 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 }
 /* Color Scheme */
 
+.popup-container .popup{
+	width:100%;
+	height:100%;
+	max-height:100%;
+}
+.popup-container .popup .popup-head{
+	background:#FF9933;
+	color:#fff;
+}
+.popup-container .popup .popup-head h3{
+	color:#fff;
+}
+
 .error{
 	width:100%;
 	background-color:rgba(255, 0, 0, 0.1);
@@ -44,9 +57,12 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 .no-margin{
 	margin-top:2px;
 }
+.margin-0{
+	margin:0px 0px 0px;
+}
 .menu .item a{
 	text-decoration:none;
-	color:#000;
+	color:#333333;
 }
 
 
@@ -61,6 +77,30 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 .profile .tabs-icon-left.tabs .tab-item + .tab-item{
 	border-left:solid 1px rgba(0,0,0,0.3);
 }
+.profile-thumbnail{
+	background:#3399CC;
+	text-align:center;
+	padding:10px;
+	color:#fff;
+}
+.profile-thumbnail img{
+	border-radius:50%;
+	max-width:120px;
+	max-height:120px;
+	background:#fff;
+	border:solid 3px #fff;
+	box-shadow:2px 2px 2px #999;
+}
+.profile-thumbnail h2{
+	color:#fff;
+	margin:0px;
+}
+.profile-edit-btn{
+	width:55px;
+	color:#fff;
+	position:absolute;
+	z-index:100;
+}
 
 .login .icon.ion-key{
 	padding-right:14px;
@@ -72,6 +112,15 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 .heightAuto{
 	height:auto !important;
 }
+.facebook-sign-in{
+	background:#666699;
+	color:#fff;
+	font-size:18px;
+}
+.facebook-sign-in:hover{
+	color:#fff;
+	background:#666699;
+}
 
 /* Maps Page */
 .swishCard a{
@@ -82,7 +131,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 $stable:  #f8f8f8 !default;
 
 .scroll {
-  padding: 10px 0 50px !important;
+  padding: 10px 0 60px !important;
 }
 .messages {
   display: -webkit-box !important;
@@ -98,7 +147,7 @@ $stable:  #f8f8f8 !default;
   -webkit-align-items: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  margin-bottom: 20px !important;
+  margin-bottom: 5px !important;
   .message {
     -webkit-box-flex: 1 !important;
     -moz-box-flex: 1 !important;
@@ -166,6 +215,13 @@ $stable:  #f8f8f8 !default;
   max-width: 240px !important;
 }
 
+.messages.other .message.slide-right{
+	width:100%;
+}
+.messages.other .message.slide-right span{
+	float:right;
+	background:#3D3E3C none repeat scroll 0% 0% !important;
+}
 
 /*** google maps ***/
 #map_canvas {

@@ -1,15 +1,19 @@
-<ion-view view-title="John Deo">
+<ion-view view-title="{{swishUser.name}}" cache-view="false">
 	<ion-nav-buttons side="right">
 		<button class="button button-icon" ng-click="showMenu($event)">
 			<i class="icon ion-android-more-vertical"></i>
 		</button>
 	</ion-nav-buttons>
 	<ion-content has-bouncing="true">
+		<button class="button button-icon profile-edit-btn" ng-click="showEditProfilePopup()">
+			<i class="icon ion-compose"></i>
+		</button>
 		<div class="list profile">
-			<div class="item item-thumbnail-left" href="#">
-				<img src="http://ionicframework.com/img/docs/blue-album.jpg">
-				<h2>John Deo</h2>
-				<p>Nine Inch Nails</p>
+			<div class="profile-thumbnail" href="#">
+				<img ng-if="swishUser.picture !== ''" ng-src="{{swishUser.picture}}">
+				<img ng-if="swishUser.picture == ''" ng-src="img/ionic.png">
+				<h2>{{swishUser.name}}</h2>
+				<p class="margin-0">{{swishUser.email}}</p>
 			</div>
 		
 			<div class="item tabs tabs-secondary tabs-icon-left">
@@ -19,13 +23,17 @@
 				</a>
 				<a class="tab-item" href="#/tab/profile/maps">
 					<i class="icon ion-ios-location"></i>
-					Nearby court<p>YMC New York</p>
+					Nearby court<p>{{swishUser.city}}</p>
 				</a>
 				<a class="tab-item" href="#">
 					<i class="icon ion-star"></i>
-					Swish Rating<p>9</p>
+					Swish Rating<p>4.5/5</p>
 				</a>
 			</div>
+		</div>
+		<div class="list">
+			<!--{{swishUser}}-->
+			<!--{{swishUser.fullData}}-->
 		</div>
 	</ion-content>
 </ion-view>

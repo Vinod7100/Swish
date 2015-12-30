@@ -12,7 +12,7 @@
 	</ion-nav-buttons>
   <ion-content has-bouncing="true">
 	<div class="list profile">
-			<div class="item item-thumbnail-left" href="#">
+			<div class="profile-thumbnail" href="#">
 				<img ng-src="{{friend.face}}">
 				<h2>{{friend.name}}</h2>
 				<p>{{friend.lastText}}</p>
@@ -36,7 +36,7 @@
 			<div class="item heightAuto">
 				<h3>Rate your friend:</h3>
 				<rating ng-model="rate" max="max"></rating>
-				<div class="list list-inset">
+				<div class="list" style="margin-top:10px">
 					<label class="item item-input">
 						<textarea name="" placeholder="Enter Comments Here..."></textarea>
 					</label>
